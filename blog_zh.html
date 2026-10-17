@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="三元九维19683认知体系，3^9=19683卦，5002等价组，五域语义桥，人类卦典，大模型Agent符号认知层" />
+  <title>三元九维19683认知体系：一个可定位可泛化的符号认知层</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/sanjiu-19683/seo_style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">三元九维19683认知体系：一个可定位可泛化的符号认知层</h1>
+</header>
+<h1
+id="三元九维19683认知体系一个可定位可泛化的符号认知层">三元九维19683认知体系：一个可定位、可泛化的符号认知层</h1>
+<blockquote>
+<p>当大模型的连续向量表示越来越强，我们是否还需要一套确定性的符号坐标？本文介绍一个从《周易》符号范式逆向提炼、再迁移到三元九维公理的认知体系——全集
+3^9 = 19683 卦，5002 个等价组，五域语义桥同判，19683
+条人类卦典，最终封装为大模型与 Agent 可调用的认知层。</p>
+</blockquote>
+<h2 id="一为什么需要符号认知层">一、为什么需要符号认知层</h2>
+<p>当前大语言模型的认知建立在连续向量空间之上。它强大，但有三个结构性短板：</p>
+<ol type="1">
+<li><strong>不可定位</strong>：一个处境在向量空间里没有确定坐标，相似性靠隐式距离，难以审计。</li>
+<li><strong>不可复算</strong>：同一句话两次编码可能落在不同邻域，推理路径不可复现。</li>
+<li><strong>不可泛化的边界模糊</strong>：“举一反三”靠模型内部联想，没有显式的邻域结构支撑迁移。</li>
+</ol>
+<p>符号系统恰好相反：它可定位、可演算、可审计，但传统符号 AI
+又过于刚性，缺乏连续化的相似性度量。</p>
+<p>三元九维19683认知体系试图取两者之长：用确定性符号提供坐标骨架，用欧氏距离提供连续化邻域，从而同时实现<strong>定位</strong>与<strong>泛化</strong>。</p>
+<h2 id="二体系的公理骨架">二、体系的公理骨架</h2>
+<p>体系逆向学习了《周易》64
+卦的符号建模范式（二元六爻、错综互变算子、卦等价类、象义映射），但没有照搬二元规则，而是迁移并锁定了一套三元九维公理：</p>
+<ul>
+<li><strong>单爻三态</strong>：阳(+1)显、向外、生发；中和(0)居间、耦合、势能平衡；阴(-1)隐、向内、收敛。</li>
+<li><strong>九维卦体</strong>：G = [g₁, g₂, …, g₉]，g₁ 为上爻，g₉
+为下爻，每维 ∈ {-1, 0, +1}。</li>
+<li><strong>全集规模</strong>：3^9 = <strong>19683</strong> 卦。</li>
+<li><strong>五类算子</strong>：
+<ul>
+<li>错卦 F_C：逐爻对偶，F_C(+1)=-1，F_C(0)=0；</li>
+<li>综卦 F_Z：序列反转；</li>
+<li>错综 F_CZ：先综后错；</li>
+<li>互卦 F_H：内核投影，输出 5 维中心连续爻；</li>
+<li>动爻变卦 F_B：F_B(+1)=0，F_B(-1)=0，F_B(0)=+1，支持 1~9
+爻同动。</li>
+</ul></li>
+<li><strong>等价类</strong>：{G, F_C(G), F_Z(G),
+F_CZ(G)}，遍历全集合并后得到 <strong>5002 个独立等价组</strong>。</li>
+<li><strong>空间距离</strong>：欧氏距离 D(G_A, G_B) = √Σ(g_Ai −
+g_Bi)²，用于 Top-N 邻域检索。</li>
+</ul>
+<p>公理一旦锁定不可修改，人文卦辞象辞属于文本创作，不能反过来改动底层数理。</p>
+<h2 id="三认知引擎的四层结构">三、认知引擎的四层结构</h2>
+<h3 id="坐标服务从自然语言到-19683-卦定位">1. 坐标服务：从自然语言到
+19683 卦定位</h3>
+<p>输入一段自然语言处境描述，系统将其映射为目标 9 维向量，在 19683
+全集中检索欧氏距离最近的 Top-N
+卦，并附带错/综/互/变爻全套推演。这一步解决”我现在在哪”的问题。</p>
+<h3 id="五域语义桥同坐标跨域同处境">2. 五域语义桥：同坐标跨域同处境</h3>
+<p>体系构建了五个语义域——体用变、洛书九宫、小六壬、疗愈、人类卦典——共享同一套
+19683
+坐标。核心假设是：<strong>同一编号的卦在不同域中指代同一处境</strong>。抽样验证的机械一致性为
+<strong>12/12</strong>。</p>
+<p>这意味着，一个在”体用变”域定位到的处境，可以直接在”疗愈”域找到对应的疗愈方向，在”小六壬”域找到对应的时位判断，在”人类卦典”域找到对应的深度解读。</p>
+<h3 id="邻域泛化从定位到举一反三">3. 邻域泛化：从定位到举一反三</h3>
+<p>已知处境定位后，系统借最近邻卦的深度卦典启示完成知识迁移。19683
+卦空间不是离散的孤岛，而是由欧氏距离连通的连续流形——相邻卦共享相似结构，其卦辞与解读构成可迁移的经验池。</p>
+<h3 id="llm-混合与-agent-工具层">4. LLM 混合与 Agent 工具层</h3>
+<p>符号提供可审计骨架，大模型补语义分辨率与人类语言解读。体系被封装为
+Agent 可调用的工具注册表（encode / search / bridge /
+decide），大模型在推理时可显式调用认知层完成定位、跨域桥接与邻域泛化，而非完全依赖隐式向量。</p>
+<h2
+id="四人类卦典从符号回归人类语言">四、人类卦典：从符号回归人类语言</h2>
+<p>认知层本身是母结构与母语言，但符号坐标必须能转译为人类原有认知语言才有实用价值。体系内置
+<strong>19683
+条人类卦典</strong>，每条含卦名、卦辞、白话解读与行动启示。</p>
+<p>解读不是凭空写的，而是从卦象义里”长出来”的：先由爻态组合与算子结构推导出象义骨架，再由大模型转译为人类可读的语言。这保证了符号与解读之间的可追溯性，避免卦典沦为随意的文本创作。</p>
+<h2 id="五开源生态">五、开源生态</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>仓库</th>
+<th>职责</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a
+href="https://github.com/q1z2q3-debug/sanjiu-core">sanjiu-core</a></td>
+<td>公理、算子、等价组、全集生成</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://github.com/q1z2q3-debug/sanjiu-ecosystem">sanjiu-ecosystem</a></td>
+<td>语义桥、泛化、LLM 混合、Agent 工具</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://github.com/q1z2q3-debug/sanjiu-nine">sanjiu-nine</a></td>
+<td>19683 卦认知空间与诗词分类</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://github.com/q1z2q3-debug/sanjiu-apk-builder">sanjiu-apk-builder</a></td>
+<td>一键生成三元九维诗词分类 APK</td>
+</tr>
+<tr class="odd">
+<td><a href="https://zenodo.org/records/23437930">Zenodo 论文</a></td>
+<td>英文论文正式发表，DOI: 10.5281/zenodo.23437930</td>
+</tr>
+</tbody>
+</table>
+<p>项目官方主页：<a
+href="https://q1z2q3-debug.github.io/sanjiu-19683/">https://q1z2q3-debug.github.io/sanjiu-19683/</a></p>
+<h2 id="六结语">六、结语</h2>
+<p>三元九维19683认知体系不是要取代大模型，而是在大模型之上加一层<strong>可定位、可泛化、可审计</strong>的符号坐标。它让”我在哪”“我和谁相邻”“我可以从哪里迁移经验”这三个问题，从隐式的向量联想变成显式的坐标演算。</p>
+<p>19683 个卦位，5002 个等价组，五域同判，19683
+条卦典——这是一个还在生长的认知空间。欢迎加入。</p>
+<hr />
+<p><em>作者：RUNZEAI · 三元九维19683认知体系 · 开源 MIT /
+CC-BY-4.0</em></p>
+</body>
+</html>
